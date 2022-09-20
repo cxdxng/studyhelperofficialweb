@@ -146,8 +146,13 @@ Widget makeCard(image, link) {
 Widget makeText(String data) {
   return Text(
     data,
-    style: const TextStyle(
-        fontSize: 32, color: Colors.white, fontWeight: FontWeight.bold),
+    style: const TextStyle(shadows: [
+      Shadow(
+        offset: Offset(3.0, 3.0),
+        blurRadius: 2.0,
+        color: Colors.black,
+      ),
+    ], fontSize: 32, color: Colors.white, fontWeight: FontWeight.bold),
   );
 }
 
