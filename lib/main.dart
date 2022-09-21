@@ -47,6 +47,7 @@ class _HomeState extends State<Home> {
   AssetImage horde = const AssetImage("assets/horde.png");
   AssetImage lea = const AssetImage("assets/lea.png");
   AssetImage leaIntern = const AssetImage("assets/leaIntern.png");
+  AssetImage miaImg = const AssetImage("assets/mia.png");
   AssetImage eva = const AssetImage("assets/eva.png");
   AssetImage eva2 = const AssetImage("assets/eva2.png");
   AssetImage stundenplan = const AssetImage("assets/stundenplan.png");
@@ -58,6 +59,8 @@ class _HomeState extends State<Home> {
   String linkLea = "https://lea.h-brs.de";
   String linkLeaIntern =
       "https://lea.hochschule-bonn-rhein-sieg.de/goto.php?target=crs_214074";
+
+  String miaLink = "https://mia.h-brs.de/";
   String linkEva = "https://eva.inf.h-brs.de";
   String linkEva2 = "https://eva2.inf.h-brs.de";
   String stundenplanEva = "https://eva2.inf.h-brs.de/stundenplan/";
@@ -95,7 +98,7 @@ class _HomeState extends State<Home> {
                       makeCard(horde, linkHorde),
                       makeCard(sis, linkSIS),
                       makeCard(lea, linkLea),
-                      makeCard(leaIntern, linkLeaIntern),
+                      makeCard(miaImg, miaLink),
                     ],
                   ),
                   Row(
