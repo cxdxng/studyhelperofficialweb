@@ -48,8 +48,8 @@ class _HomeState extends State<Home> {
   AssetImage lea = const AssetImage("assets/lea.png");
   AssetImage leaIntern = const AssetImage("assets/leaIntern.png");
   AssetImage miaImg = const AssetImage("assets/mia.png");
-  AssetImage eva = const AssetImage("assets/eva.png");
-  AssetImage eva2 = const AssetImage("assets/eva2.png");
+  AssetImage mensaImage = const AssetImage("assets/mensaImage.png");
+  AssetImage praktoImage = const AssetImage("assets/praktoImage.png");
   AssetImage stundenplan = const AssetImage("assets/stundenplan.png");
   AssetImage zeitplanImage = const AssetImage("assets/zeitplanImage.png");
 
@@ -57,14 +57,15 @@ class _HomeState extends State<Home> {
   String linkSIS = "https://sis.h-brs.de";
   String linkHorde = "https://horde.inf.h-brs.de";
   String linkLea = "https://lea.h-brs.de";
-  String linkLeaIntern =
-      "https://lea.hochschule-bonn-rhein-sieg.de/goto.php?target=crs_214074";
 
   String miaLink = "https://mia.h-brs.de/";
   String linkEva = "https://eva.inf.h-brs.de";
-  String linkEva2 = "https://eva2.inf.h-brs.de";
+  String linkPrakto = "https://praktomat.inf.h-brs.de/";
   String stundenplanEva = "https://eva2.inf.h-brs.de/stundenplan/";
   String zeitplan = "https://horde.inf.h-brs.de/fbz.html";
+
+  String mensa =
+      "https://www.studierendenwerk-bonn.de/essen-trinken/mensen-cafes/mensa-sankt-augustin/";
 
   @override
   void initState() {
@@ -104,8 +105,8 @@ class _HomeState extends State<Home> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      makeCard(eva, linkHorde),
-                      makeCard(eva2, linkHorde),
+                      makeCard(mensaImage, mensa),
+                      makeCard(praktoImage, linkPrakto),
                       makeCard(stundenplan, stundenplanEva),
                       makeCard(zeitplanImage, zeitplan),
                     ],
