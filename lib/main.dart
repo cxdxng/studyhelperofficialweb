@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-
+import 'dart:html' as html;
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:intl/intl.dart';
@@ -31,16 +31,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   // Declare variables for runtime
 
-  // Create a list for all upcomming appointments for runtime
-  List appointments = [];
-  // Create an instance of DateTime.now() to get current time
-  DateTime now = DateTime.now();
-  // Empty Strings to hold selected Date/Time for adding events
-  String formattedDate = "";
-  String formattedTime = "";
-
-  // Unformatted date for uploading to mysql
-  String mysqlDate = "";
+  TextEditingController searchController = TextEditingController();
 
   // Images for Cards
   AssetImage sis = const AssetImage("assets/sis.png");
@@ -92,6 +83,30 @@ class _HomeState extends State<Home> {
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: makeText("Welcome to StudyHelper"),
+                  ),
+                  Container(
+                    height: 100,
+                    width: 700,
+                    child: TextField(
+                      onSubmitted: ((value) {
+                        launchUrl(Uri.parse("https://$value"));
+                        searchController.clear();
+                      }),
+                      controller: searchController,
+                      decoration: InputDecoration(
+                        hintText: "Open URL...",
+                        filled: true,
+                        fillColor: Colors.white,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(width: 3, color: Colors.white),
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(width: 3, color: Colors.white),
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
