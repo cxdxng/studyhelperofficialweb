@@ -43,6 +43,7 @@ class _HomeState extends State<Home> {
   AssetImage praktoImage = const AssetImage("assets/praktoImage.png");
   AssetImage stundenplan = const AssetImage("assets/stundenplan.png");
   AssetImage zeitplanImage = const AssetImage("assets/zeitplanImage.png");
+  AssetImage evaImage = const AssetImage("assets/eva.png");
 
   // Links to websites
   String linkSIS = "https://sis.h-brs.de";
@@ -121,7 +122,7 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       makeCard(mensaImage, mensa),
-                      makeCard(praktoImage, linkPrakto),
+                      makeCard(evaImage, linkEva),
                       makeCard(stundenplan, stundenplanEva),
                       makeCard(zeitplanImage, zeitplan),
                     ],
