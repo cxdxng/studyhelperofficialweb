@@ -1,10 +1,4 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'dart:html' as html;
-import 'package:http/http.dart' as http;
-import 'package:http/http.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -69,9 +63,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Study Helper"),
-        ),
         body: Builder(builder: (context) {
           return Container(
             decoration: const BoxDecoration(
